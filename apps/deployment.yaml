@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: k8s-laravel
-          image: 158.247.192.124:30002/library/k8s-laravel:latest
+          image: 158.247.192.124:30002/laraveltest/k8s-laravel:latest
           ports:
             - containerPort: 9000
