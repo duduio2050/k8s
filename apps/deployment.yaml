@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k8s-laravel
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: k8s-laravel
+  template:
+    metadata:
+      labels:
+        app: k8s-laravel
+    spec:
+      containers:
+        - name: k8s-laravel
+          image: 158.247.192.124:30002/library/k8s-laravel:latest
+          ports:
+            - containerPort: 9000
