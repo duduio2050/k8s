@@ -13,6 +13,8 @@ spec:
       labels:
         app: k8s-laravel
     spec:
+      imagePullSecrets:
+        - name: harbor-secret
       containers:
         - name: k8s-laravel
           image: 158.247.192.124:30002/laraveltest/k8s-laravel:latest
