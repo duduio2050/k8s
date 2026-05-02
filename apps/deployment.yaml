@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: k8s-laravel
-  namespace: default
+  namespace: laravelTest
 spec:
   replicas: 1
   selector:
