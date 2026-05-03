@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: k8s-laravel
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/duduio2050/k8s
+    targetRevision: main
+    path: apps
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: laraveltest
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
