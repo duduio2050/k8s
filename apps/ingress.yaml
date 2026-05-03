@@ -4,6 +4,7 @@ metadata:
   name: k8s-laravel
   namespace: laraveltest
 spec:
+  ingressClassName: nginx
   rules:
     - http:
         paths:
